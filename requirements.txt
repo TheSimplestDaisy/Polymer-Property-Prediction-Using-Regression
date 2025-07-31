@@ -7,4 +7,3 @@ rdkit-pypi
 numpy
 matplotlib
 tqdm
-regex
