@@ -1,0 +1,48 @@
+# Dataset paths
+pretrain_path: 'data/pretrain_1M.csv'
+pretrain_500k_path: 'data/pretrain_500k.csv'
+pretrain_50k_path: 'data/pretrain_50k.csv'
+pretrain_5k_path: 'data/pretrain_5k.csv'
+PE_I_path: 'data/PE_I.csv'
+PE_II_path: 'data/PE_II.csv'
+Egc_path: 'data/Egc.csv'
+Egb_path: 'data/Egb.csv'
+Eea_path: 'data/Eea.csv'
+Ei_path: 'data/Ei.csv'
+Xc_path: 'data/Xc.csv'
+EPS_path: 'data/EPS.csv'
+Nc_path: 'data/Nc.csv'
+OPV_path: 'data/OPV.csv'
+
+# Labels for legend
+pretrain_label: 'Pretrain (1M)'
+pretrain_500k_label: 'Pretrain (500k)'
+pretrain_50k_label: 'Pretrain (50k)'
+pretrain_5k_label: 'Pretrain (5k)'
+PE_I_label: 'PE-I'
+PE_II_label: 'PE-II'
+Egc_label: 'Egc'
+Egb_label: 'Egb'
+Eea_label: 'Eea'
+Ei_label: 'Ei'
+Xc_label: 'Xc'
+EPS_label: 'EPS'
+Nc_label: 'Nc'
+OPV_label: 'OPV'
+
+# Tokenizer vocab and merges
+vocab_file: 'ckpt/roberta-base/vocab.json'
+merges_file: 'ckpt/roberta-base/merges.txt'
+
+# Output path
+save_path: 'figs/tSNE_1M.png'
+
+# Tokenizer and dataloader settings
+blocksize: 512
+batch_size: 64
+
+# t-SNE config
+perplexity: 50
+metric: 'euclidean'
+n_jobs: 8
+verbose: True

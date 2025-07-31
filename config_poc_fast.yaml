@@ -1,0 +1,29 @@
+# Lightweight POC config (for CPU)
+
+file_path: 'data/pretrain_subset_10k.csv'
+
+epochs: 3
+batch_size: 32           # Lebih ringan dari 64
+lr_rate: 0.0001
+scheduler_type: 'linear'
+weight_decay: 0.01
+warmup_ratio: 0.05
+save_strategy: 'epoch'
+overwrite_output_dir: True
+save_total_limit: 2
+fp16: False              # CPU tidak perlu fp16
+logging_strategy: 'epoch'
+evaluation_strategy: 'epoch'
+report_to: 'tensorboard'
+dataloader_num_workers: 2
+sharded_ddp: False
+save_path: 'ckpt/poc_fast_model.pt'
+load_checkpoint: False
+
+max_position_embeddings: 514
+blocksize: 175
+num_attention_heads: 6   # Kurangkan untuk ringankan model
+num_hidden_layers: 4
+hidden_dropout_prob: 0.1
+attention_probs_dropout_prob: 0.1
+mlm_probability: 0.15
